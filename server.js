@@ -30,8 +30,13 @@ app.use(bodyParser.urlencoded({extended:true}));
 // app.use(passport.session());
 
 
+mongoose.connect("mongodb+srv://mansih:Cfo0lyPvoxJN8hFM@cluster0.k6145.mongodb.net/myFirstDatabase?retryWrites=true&w=majority",{useNewUrlParser: true})
+.then(()=>{
+    console.log("Database Connected");
+}).catch(err=>{
+    console.log("Database not Connected!!!");
+});
 
-mongoose.connect("mongodb://Localhost:27017/CampusQ",{useNewUrlParser: true});
 
 
 
